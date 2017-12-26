@@ -1,0 +1,33 @@
+<view style="min-height : {{screen.minHeight}};background-color: #2f2f2f;">
+	<view class="banner">
+		<view class="poster">
+			<image mode="aspectFit" src="{{movie.iconaddress}}"></image>
+		</view>
+		<view class="info">
+			<view class="title">{{movie.tvTitle}}</view>
+			<view>{{movie.aka[movie.aka.length - 1]}}</view>
+			<view class="score">{{movie.grade}}分<view>{{movie.gradeNum}}</view></view>
+			<view class="subinfo">
+				<view>{{movie.genresStr}}</view>
+				<view>{{movie.playDate.data}}上映</view>
+			</view>
+		</view>
+		<image class="background" mode="aspectFill" src="{{movie.images.large}}"></image>
+	</view>
+
+	<view class="summary">
+		{{movie.story.data.showname}}:{{movie.story.data.storyBrief}}
+	</view>
+
+	<view class="casts">
+		<view class="title">详情</view>
+		<scroll-view scroll-x>
+    演员：
+			<view class="casts-wrapper" style="width:{{movie.star}}rpx;">
+      	<view class="avatar" wx:for="{{movie.star.data}}">
+					<view>{{item.name}}</view>
+				</view>
+			</view>
+     	</scroll-view>
+	</view>
+</view>

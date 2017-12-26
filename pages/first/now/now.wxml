@@ -1,0 +1,13 @@
+<view style="text-align:center"> {{title}} </view>
+
+<view class="list basestyle">
+	<block wx:for="{{movies.data}}">
+		<view class="item">
+			<navigator url="../../detail/detail?id={{index}}&item=0">
+				<image mode="aspectFill" src="{{item.iconaddress}}"></image>
+				<text>{{index}}{{item.tvTitle}}</text>
+
+			</navigator>
+		</view>
+	</block>
+</view>

@@ -1,0 +1,3 @@
+<button bindtap="turn">正在上映</button>
+<button bindtap="change">即将上映</button>
+<button>组队按钮（正在开发）</button>
